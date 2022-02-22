@@ -1,0 +1,16 @@
+training:
+  cmd: python src/train.py
+  deps:
+    - data_11-whitespace-aug
+    - best_model.data-00000-of-00001
+    - src/train.py
+  metrics:
+    - train_result.json:
+        cache: false
+    -test_result.json
+        cache: false
+  plots:
+    - loss.json:
+        cache: false
+    - acc.json:
+        cache: false
